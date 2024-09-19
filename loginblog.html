@@ -69,25 +69,17 @@
             color: white;
         }
     </style>
-  <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Retrieve counter value from local storage or default to 0
-    let count = parseInt(localStorage.getItem('codeCounter') || '0', 10);
-    document.getElementById('code-counter').textContent = count;
-
-    // Function to increment counter
-    function incrementCounter() {
-        count++;
-        document.getElementById('code-counter').textContent = count;
-        localStorage.setItem('codeCounter', count);
-    }
-
-    // Add event listener to copy code elements
-    document.querySelectorAll('.code-copy').forEach(button => {
-        button.addEventListener('click', incrementCounter);
-    });
-});
-</script>
+ <script>
+        function copyCode(id) {
+            var codeText = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(codeText).then(function() {
+                var counter = document.getElementById(id + '-counter');
+                var count = parseInt(counter.innerText) || 0;
+                counter.innerText = count + 1;
+                alert("Code copied successfully!");
+            });
+        }
+    </script>
 
 
 </head>
