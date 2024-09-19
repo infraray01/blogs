@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XAMPP Installation Guide</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #292c35;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-out;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 28px;
+            margin: 0;
+        }
+
+        h2 {
+            color: #292c35;
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #292c35;
+            padding-bottom: 10px;
+        }
+
+        ol {
+            margin: 0;
+            padding: 0 0 0 20px;
+        }
+
+        li {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        li:hover {
+            background-color: #d4d4d4;
+            transform: translateY(-5px);
+        }
+
+        pre {
+            background-color: #292c35;
+            color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 10px;
+            background-color: #292c35;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .code-block {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .code-block h2 {
+            margin-top: 0;
+            color: #292c35;
+        }
+
+        .code-block pre {
+            background-color: #292c35;
+            color: #f4f4f4;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ffc107;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #292c35;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff9800;
+            transform: translateY(-2px);
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        .troubleshooting {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .troubleshooting h3 {
+            color: #292c35;
+        }
+
+        .troubleshooting p {
+            margin: 0;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>XAMPP Installation Guide</h1>
+        <button onclick="location.href='index.html'">BACK</button>
+    </header>
+
+    <div class="container">
+        <h2>How to Install XAMPP and Run phpMyAdmin, MySQL, and Apache</h2>
+        <p>Follow these steps to install XAMPP and get started with phpMyAdmin, MySQL, and Apache:</p>
+        
+        <ol>
+            <li>
+                <strong>Download XAMPP:</strong>
+                <p>Visit the official <a href="https://www.apachefriends.org/index.html" target="_blank">XAMPP website</a> and download the installer for your operating system (Windows, macOS, or Linux).</p>
+            </li>
+            <li>
+                <strong>Run the Installer:</strong>
+                <p>Locate the downloaded installer file and run it. Follow the installation wizard's instructions. You can generally accept the default settings.</p>
+            </li>
+            <li>
+                <strong>Start XAMPP Control Panel:</strong>
+                <p>After installation, open the XAMPP Control Panel. On Windows, you can find it in the Start Menu or by searching for "XAMPP Control Panel." On macOS and Linux, you can launch it from the Applications folder.</p>
+            </li>
+            <li>
+                <strong>Start Apache and MySQL:</strong>
+                <p>In the XAMPP Control Panel, you will see a list of services. Click the "Start" button next to "Apache" and "MySQL" to start these services.</p>
+            </li>
+            <li>
+                <strong>Access phpMyAdmin:</strong>
+                <p>Open your web browser and go to <a href="http://localhost/phpmyadmin" target="_blank">http://localhost/phpmyadmin</a>. This will open phpMyAdmin, a web-based tool to manage your MySQL databases.</p>
+            </li>
+            <li>
+                <strong>Create a Database:</strong>
+                <p>In phpMyAdmin, you can create a new database by clicking on the "Databases" tab, entering a name for your database, and clicking "Create."</p>
+            </li>
+            <li>
+                <strong>Access Your Local Website:</strong>
+                <p>You can access your local website by placing your HTML files in the <code>htdocs</code> directory inside your XAMPP installation folder. Open your browser and go to <a href="http://localhost" target="_blank">http://localhost</a> to view your website.</p>
+            </li>
+        </ol>
+
+        <div class="troubleshooting">
+            <h3>Troubleshooting Common Issues</h3>
+            <p><strong>Issue:</strong> Apache or MySQL fails to start.</p>
+            <p><strong>Solution:</strong> Check if another application is using the same port as Apache or MySQL. Common culprits include Skype or other web servers. Change the port settings in the XAMPP Control Panel or configure the conflicting application to use a different port.</p>
+
+            <p><strong>Issue:</strong> "Access denied" error in phpMyAdmin.</p>
+            <p><strong>Solution:</strong> Ensure that you are using the correct username and password. By default, the username is "root" with no password. You can also reset the MySQL root password if necessary.</p>
+
+            <p><strong>Issue:</strong> "404 Not Found" error when accessing your local website.</p>
+            <p><strong>Solution:</strong> Verify that your files are correctly placed in the <code>htdocs</code> directory. Ensure that your file names and paths are correct.</p>
+
+            <p>If you encounter other issues, check the XAMPP documentation or visit the <a href="https://community.apachefriends.org/f/" target="_blank">XAMPP community forums</a> for more support.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Crafted Whimsy. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

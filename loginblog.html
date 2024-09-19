@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration Code Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #292c35;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        h2 {
+            color: #292c35;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        pre {
+            background-color: #292c35;
+            color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+
+        .code-block {
+            margin-bottom: 30px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #ffc107;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #292c35;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #ff9800;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 10px;
+            background-color: #292c35;
+            color: white;
+        }
+    </style>
+    <script>
+        function copyCode(id) {
+            var codeText = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(codeText).then(function() {
+                var counter = document.getElementById(id + '-counter');
+                var count = parseInt(counter.innerText) || 0;
+                counter.innerText = count + 1;
+                alert("Code copied successfully!");
+            });
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Login & Registration System - Code Blog</h1>
+    <p>Copy the code and build your own login and registration system!</p>
+    <button onclick="location.href='index.html'">BACK</button>
+</header>
+
+<div class="container">
+
+
+    <div class="code-block">
+        <h1>SQL Code Display</h1>
+        <pre><code>CREATE DATABASE login;
+    
+    USE login;
+    
+    CREATE TABLE users (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(100) NOT NULL,
+        email VARCHAR(100) NOT NULL UNIQUE,
+        password VARCHAR(255) NOT NULL
+    );</code></pre>
+        <button onclick="copyCode('directory-structure-code')">Copy Directory Structure</button>
+        <p>Copied: <span id="directory-structure-code-counter">0</span> times</p>
+    </div>
+    
+
+  
+    <!-- index.html (previously login.html) -->
+<div class="code-block">
+    <h2>index.html</h2>
+    <pre id="index-html-code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Login &amp; Registration&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="login"&gt;
+        &lt;div class="cont"&gt;
+            &lt;div class="form sign-in"&gt;
+                &lt;h2&gt;Welcome&lt;/h2&gt;
+                &lt;form action="signin.php" method="POST"&gt;
+                    &lt;label&gt;
+                        &lt;span&gt;Email&lt;/span&gt;
+                        &lt;input type="email" name="email" required /&gt;
+                    &lt;/label&gt;
+                    &lt;label&gt;
+                        &lt;span&gt;Password&lt;/span&gt;
+                        &lt;input type="password" name="password" required /&gt;
+                    &lt;/label&gt;
+                    &lt;p class="forgot-pass"&gt;
+                        &lt;a href="forgot_password.php"&gt;Forgot password?&lt;/a&gt;
+                    &lt;/p&gt;
+                    &lt;button type="submit" class="submit"&gt;Sign In&lt;/button&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        
+            &lt;div class="sub-cont"&gt;
+                &lt;div class="img"&gt;
+                    &lt;div class="img__text m--up"&gt;
+                        &lt;h1&gt;PREMIER UNIVERSITY&lt;/h1&gt;&lt;br&gt;
+                        &lt;h3&gt;Don't have an account? Please Sign up! Easy Steps&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;div class="img__text m--in"&gt;
+                        &lt;h1&gt;PREMIER UNIVERSITY&lt;/h1&gt;&lt;br&gt;
+                        &lt;h3&gt;If you already have an account, just sign in.&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;div class="img__btn"&gt;
+                        &lt;span class="m--up"&gt;Sign Up&lt;/span&gt;
+                        &lt;span class="m--in"&gt;Sign In&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="form sign-up"&gt;
+                    &lt;h2&gt;Create your Account&lt;/h2&gt;
+                    &lt;form action="signup.php" method="POST"&gt;
+                        &lt;label&gt;
+                            &lt;span&gt;Name&lt;/span&gt;
+                            &lt;input type="text" name="name" required /&gt;
+                        &lt;/label&gt;
+                        &lt;label&gt;
+                            &lt;span&gt;Email&lt;/span&gt;
+                            &lt;input type="email" name="email" required /&gt;
+                        &lt;/label&gt;
+                        &lt;label&gt;
+                            &lt;span&gt;Password&lt;/span&gt;
+                            &lt;input type="password" name="password" required /&gt;
+                        &lt;/label&gt;
+                        &lt;button type="submit" class="submit"&gt;Sign Up&lt;/button&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        document.querySelector('.img__btn').addEventListener('click', function() {
+            document.querySelector('.cont').classList.toggle('s--signup');
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+    <button onclick="copyCode('index-html-code')">Copy index.html Code</button>
+    <p>Copied: <span id="index-html-code-counter">0</span> times</p>
+</div>
+
+
+<br><br><br>
+
+<!-- index.css -->
+<div class="code-block">
+    <h2>style.css</h2>
+    <pre id="index-css-code">
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+    background: none;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+.tip {
+    font-size: 20px;
+    margin: 40px auto 50px;
+    text-align: center;
+}
+
+.cont {
+    top: 25%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 900px;
+    height: 550px;
+    margin: 0 auto 100px;
+    background: #fff;
+}
+
+.form {
+    position: relative;
+    width: 640px;
+    height: 100%;
+    -webkit-transition: -webkit-transform 1.2s ease-in-out;
+    transition: -webkit-transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+    padding: 50px 30px 0;
+}
+
+.sub-cont {
+    overflow: hidden;
+    position: absolute;
+    left: 640px;
+    top: 0;
+    width: 900px;
+    height: 100%;
+    padding-left: 260px;
+    background: #fff;
+    -webkit-transition: -webkit-transform 1.2s ease-in-out;
+    transition: -webkit-transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+
+.cont.s--signup .sub-cont {
+    -webkit-transform: translate3d(-640px, 0, 0);
+    transform: translate3d(-640px, 0, 0);
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    height: 36px;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.img {
+    overflow: hidden;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    padding-top: 360px;
+}
+
+.img:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 900px;
+    height: 100%;
+    background-image: url("pexels-kubiceknov-924824.jpg");
+    opacity: .8;
+    background-size: cover;
+    -webkit-transition: -webkit-transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+
+.img:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.cont.s--signup .img:before {
+    -webkit-transform: translate3d(640px, 0, 0);
+    transform: translate3d(640px, 0, 0);
+}
+
+.img__text {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    color: #fff;
+    -webkit-transition: -webkit-transform 1.2s ease-in-out;
+    transition: -webkit-transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+
+.img__text h2 {
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.img__text p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.cont.s--signup .img__text.m--up {
+    -webkit-transform: translateX(520px);
+    transform: translateX(520px);
+}
+
+.img__text.m--in {
+    -webkit-transform: translateX(-520px);
+    transform: translateX(-520px);
+}
+
+.cont.s--signup .img__text.m--in {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.img__btn {
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+    width: 100px;
+    height: 36px;
+    margin: 0 auto;
+    background: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.img__btn:after {
+    content: '';
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 30px;
+}
+
+.img__btn span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform 1.2s;
+    transition: -webkit-transform 1.2s;
+    transition: transform 1.2s;
+    transition: transform 1.2s, -webkit-transform 1.2s;
+}
+
+.img__btn span.m--in {
+    -webkit-transform: translateY(-72px);
+    transform: translateY(-72px);
+}
+
+.cont.s--signup .img__btn span.m--in {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.cont.s--signup .img__btn span.m--up {
+    -webkit-transform: translateY(72px);
+    transform: translateY(72px);
+}
+
+h2 {
+    width: 100%;
+    font-size: 26px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    width: 260px;
+    margin: 25px auto 0;
+    text-align: center;
+}
+
+label span {
+    font-size: 12px;
+    color: #cfcfcf;
+    text-transform: uppercase;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.forgot-pass {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: #cfcfcf;
+}
+
+.submit {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background: #ffc107;
+    text-transform: uppercase;
+}
+
+.fb-btn {
+    border: 2px solid #d3dae9;
+    color: #8fa1c7;
+}
+
+.fb-btn span {
+    font-weight: bold;
+    color: #455a81;
+}
+
+.sign-in {
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.cont.s--signup .sign-in {
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 1.2s;
+    transition-duration: 1.2s;
+    -webkit-transform: translate3d(640px, 0, 0);
+    transform: translate3d(640px, 0, 0);
+}
+
+.sign-up {
+    -webkit-transform: translate3d(-900px, 0, 0);
+    transform: translate3d(-900px, 0, 0);
+}
+
+.cont.s--signup .sign-up {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    background: #1c1e29;
+}
+    </pre>
+    <button onclick="copyCode('index-css-code')">Copy index.css Code</button>
+    <p>Copied: <span id="index-css-code-counter">0</span> times</p>
+</div>
+
+<br><br><br>
+
+    <!-- main.html (previously index.html) -->
+    <div class="code-block">
+        <h2>main.html</h2>
+        <pre id="main-html-code"> <pre><code>&lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title&gt;Main Page&lt;/title&gt;
+                &lt;link rel="stylesheet" href="style.css"&gt;
+                &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            
+                &lt;!-- Navbar --&gt;
+                &lt;header&gt;
+                    &lt;nav&gt;
+                        &lt;div class="logo"&gt;
+                            &lt;h1&gt;Crafted Whimsy&lt;/h1&gt;
+                        &lt;/div&gt;
+                        &lt;ul class="nav-links"&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Blogs&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="index.html" class="logout-btn"&gt;Logout&lt;/a&gt;&lt;/li&gt; &lt;!-- Added Logout Option --&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+                &lt;/header&gt;
+            
+                &lt;!-- Hero Section --&gt;
+                &lt;section class="hero"&gt;
+                    &lt;div class="hero-content"&gt;
+                        &lt;h2&gt;Welcome to Crafted Whimsy&lt;/h2&gt;
+                        &lt;p&gt;Discover the best handmade crafts and ideas to inspire your creativity.&lt;/p&gt;
+                        &lt;a href="#" class="hero-btn"&gt;Explore More&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/section&gt;
+            
+                &lt;!-- Blog Section --&gt;
+                &lt;section class="blogs"&gt;
+                    &lt;h2&gt;Latest Blogs&lt;/h2&gt;
+                    &lt;div class="blog-container"&gt;
+                        &lt;div class="blog-card"&gt;
+                            &lt;img src="https://via.placeholder.com/300x200" alt="Blog Image"&gt;
+                            &lt;h3&gt;Login And Registration&lt;/h3&gt;
+                            &lt;p&gt;Make backend login and registration using phpMyAdmin and XAMPP.&lt;/p&gt;
+                            &lt;a href="#" class="read-more"&gt;Read More&lt;/a&gt;
+                        &lt;/div&gt;
+            
+                        &lt;div class="blog-card"&gt;
+                            &lt;img src="https://via.placeholder.com/300x200" alt="Blog Image"&gt;
+                            &lt;h3&gt;Machine Crafting 101&lt;/h3&gt;
+                            &lt;p&gt;Learn the basics of machine crafting and how to get started with simple projects.&lt;/p&gt;
+                            &lt;a href="#" class="read-more"&gt;Read More&lt;/a&gt;
+                        &lt;/div&gt;
+            
+                        &lt;div class="blog-card"&gt;
+                            &lt;img src="https://via.placeholder.com/300x200" alt="Blog Image"&gt;
+                            &lt;h3&gt;DIY Projects for Beginners&lt;/h3&gt;
+                            &lt;p&gt;A step-by-step guide to DIY projects that are perfect for beginners.&lt;/p&gt;
+                            &lt;a href="#" class="read-more"&gt;Read More&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/section&gt;
+            
+                &lt;!-- Footer --&gt;
+                &lt;footer&gt;
+                    &lt;p&gt;&copy; 2024 Crafted Whimsy. All Rights Reserved.&lt;/p&gt;
+                    &lt;ul class="social-links"&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Instagram&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/footer&gt;
+            
+            &lt;/body&gt;
+            &lt;/html&gt;</code></pre>
+            </div>
+<br><br><br>
+    <!-- signup.php (for Registration) -->
+    <div class="code-block">
+        <h2>signup.php (for Registration)</h2>
+        <pre id="signup-php-code">
+&lt;?php
+session_start();
+include 'db.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $check_email = $conn-&gt;prepare("SELECT * FROM users WHERE email = ?");
+    $check_email-&gt;bind_param("s", $email);
+    $check_email-&gt;execute();
+    $result = $check_email-&gt;get_result();
+    if ($result-&gt;num_rows &gt; 0) {
+        echo "&lt;script&gt;alert('Email already taken'); window.location.href = 'index.html';&lt;/script&gt;";
+    } else {
+        $stmt = $conn-&gt;prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
+        $stmt-&gt;bind_param("sss", $name, $email, $password);
+        if ($stmt-&gt;execute()) {
+            echo "&lt;script&gt;alert('Registration successful! Please login.'); window.location.href = 'index.html';&lt;/script&gt;";
+        } else {
+            echo "&lt;script&gt;alert('Error registering user.'); window.location.href = 'index.html';&lt;/script&gt;";
+        }
+    }
+    $conn-&gt;close();
+}
+?>
+        </pre>
+        <button onclick="copyCode('signup-php-code')">Copy signup.php Code</button>
+        <p>Copied: <span id="signup-php-code-counter">0</span> times</p>
+    </div>
+
+    <!-- signin.php (for Login) -->
+    <div class="code-block">
+        <h2>signin.php (for Login)</h2>
+        <pre id="signin-php-code">
+&lt;?php
+session_start();
+include 'db.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $stmt = $conn-&gt;prepare("SELECT * FROM users WHERE email = ?");
+    $stmt-&gt;bind_param("s", $email);
+    $stmt-&gt;execute();
+    $result = $stmt-&gt;get_result();
+    if ($result-&gt;num_rows &gt; 0) {
+        $user = $result-&gt;fetch_assoc();
+        if (password_verify($password, $user['password'])) {
+            $_SESSION['user_id'] = $user['id'];
+            header("Location: main.html");
+        } else {
+            echo "&lt;script&gt;alert('Invalid credentials'); window.location.href = 'index.html';&lt;/script&gt;";
+        }
+    } else {
+        echo "&lt;script&gt;alert('Email not found'); window.location.href = 'index.html';&lt;/script&gt;";
+    }
+    $conn-&gt;close();
+}
+?>
+        </pre>
+        <button onclick="copyCode('signin-php-code')">Copy signin.php Code</button>
+        <p>Copied: <span id="signin-php-code-counter">0</span> times</p>
+    </div>
+
+    <!-- db.php (Database Connection) -->
+    <div class="code-block">
+        <h2>db.php (Database Connection)</h2>
+        <pre id="db-php-code">
+&lt;?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mydatabase";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn-&gt;connect_error) {
+    die("Connection failed: " . $conn-&gt;connect_error);
+}
+?>
+        </pre>
+        <button onclick="copyCode('db-php-code')">Copy db.php Code</button>
+        <p>Copied: <span id="db-php-code-counter">0</span> times</p>
+    </div>
+
+    <!-- Directory Structure -->
+    <div class="code-block">
+        <h2>Directory Structure</h2>
+        <pre id="directory-structure-code">
+            /your_project_folder/
+                ├── index.html
+                ├── main.html
+                ├── signup.php
+                ├── signin.php
+                ├── db.php
+                ├── login.css
+                ├── style.css
+                        </pre>
+        <button onclick="copyCode('directory-structure-code')">Copy Directory Structure</button>
+        <p>Copied: <span id="directory-structure-code-counter">0</span> times</p>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2024 Crafted Whimsy. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
