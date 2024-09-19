@@ -69,38 +69,17 @@
             color: white;
         }
     </style>
-   <script>
-function setCookie(name, value, days) {
-    let expires = "";
-    if (days) {
-        let date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
-}
-
-function getCookie(name) {
-    let nameEQ = name + "=";
-    let ca = document.cookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-    }
-    return null;
-}
-
+  <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Retrieve counter value from cookies or default to 0
-    let count = parseInt(getCookie('codeCounter') || '0', 10);
+    // Retrieve counter value from local storage or default to 0
+    let count = parseInt(localStorage.getItem('codeCounter') || '0', 10);
     document.getElementById('code-counter').textContent = count;
 
     // Function to increment counter
     function incrementCounter() {
         count++;
         document.getElementById('code-counter').textContent = count;
-        setCookie('codeCounter', count, 7); // Cookie expires in 7 days
+        localStorage.setItem('codeCounter', count);
     }
 
     // Add event listener to copy code elements
@@ -109,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
 
 </head>
 <body>
