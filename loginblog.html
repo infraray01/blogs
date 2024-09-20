@@ -69,7 +69,7 @@
             color: white;
         }
     </style>
- <script>
+    <script>
         function copyCode(id) {
             var codeText = document.getElementById(id).innerText;
             navigator.clipboard.writeText(codeText).then(function() {
@@ -80,8 +80,6 @@
             });
         }
     </script>
-
-
 </head>
 <body>
 
@@ -514,82 +512,89 @@ input {
     <!-- main.html (previously index.html) -->
     <div class="code-block">
         <h2>main.html</h2>
-        <pre id="main-html-code"> <pre><code>&lt;!DOCTYPE html&gt;
-            &lt;html lang="en"&gt;
-            &lt;head&gt;
-                &lt;meta charset="UTF-8"&gt;
-                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                &lt;title&gt;Main Page&lt;/title&gt;
-                &lt;link rel="stylesheet" href="style.css"&gt;
-                &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
+        <pre id="main-html-code">
             
-                &lt;!-- Navbar --&gt;
-                &lt;header&gt;
-                    &lt;nav&gt;
-                        &lt;div class="logo"&gt;
-                            &lt;h1&gt;Crafted Whimsy&lt;/h1&gt;
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang=&quot;en&quot;&gt;
+                &lt;head&gt;
+                    &lt;meta charset=&quot;UTF-8&quot;&gt;
+                    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+                    &lt;title&gt;Main Page&lt;/title&gt;
+                    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+                    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                
+                    &lt;!-- Navbar --&gt;
+                    &lt;header&gt;
+                        &lt;nav&gt;
+                            &lt;div class=&quot;logo&quot;&gt;
+                                &lt;h1&gt;Crafted Whimsy&lt;/h1&gt;
+                            &lt;/div&gt;
+                            &lt;ul class=&quot;nav-links&quot;&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Blogs&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;index.html&quot; class=&quot;logout-btn&quot;&gt;Logout&lt;/a&gt;&lt;/li&gt; 
+                            &lt;/ul&gt;
+                        &lt;/nav&gt;
+                    &lt;/header&gt;
+                
+                    &lt;!-- Hero Section --&gt;
+                    &lt;section class=&quot;hero&quot;&gt;
+                        &lt;div class=&quot;hero-content&quot;&gt;
+                            &lt;h2&gt;Welcome to Crafted Whimsy&lt;/h2&gt;
+                            &lt;p&gt;Discover the best handmade crafts and ideas to inspire your creativity.&lt;/p&gt;
+                            &lt;a href=&quot;#&quot; class=&quot;hero-btn&quot;&gt;Explore More&lt;/a&gt;
                         &lt;/div&gt;
-                        &lt;ul class="nav-links"&gt;
-                            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href="#"&gt;Blogs&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href="index.html" class="logout-btn"&gt;Logout&lt;/a&gt;&lt;/li&gt; &lt;!-- Added Logout Option --&gt;
+                    &lt;/section&gt;
+                
+                    &lt;!-- Blog Section --&gt;
+                    &lt;section class=&quot;blogs&quot;&gt;
+                        &lt;h2&gt;Latest Blogs&lt;/h2&gt;
+                        &lt;div class=&quot;blog-container&quot;&gt;
+                            &lt;div class=&quot;blog-card&quot;&gt;
+                                &lt;img src=&quot;https://via.placeholder.com/300x200&quot; alt=&quot;Blog Image&quot;&gt;
+                                &lt;h3&gt;Login And Registration&lt;/h3&gt;
+                                &lt;p&gt;Make backend login and registration using phpmyadmion xampp&lt;/p&gt;
+                                &lt;a href=&quot;#&quot; class=&quot;read-more&quot;&gt;Read More&lt;/a&gt;
+                            &lt;/div&gt;
+                
+                            &lt;div class=&quot;blog-card&quot;&gt;
+                                &lt;img src=&quot;https://via.placeholder.com/300x200&quot; alt=&quot;Blog Image&quot;&gt;
+                                &lt;h3&gt;Machine Crafting 101&lt;/h3&gt;
+                                &lt;p&gt;Learn the basics of machine crafting and how to get started with simple projects.&lt;/p&gt;
+                                &lt;a href=&quot;#&quot; class=&quot;read-more&quot;&gt;Read More&lt;/a&gt;
+                            &lt;/div&gt;
+                
+                            &lt;div class=&quot;blog-card&quot;&gt;
+                                &lt;img src=&quot;https://via.placeholder.com/300x200&quot; alt=&quot;Blog Image&quot;&gt;
+                                &lt;h3&gt;DIY Projects for Beginners&lt;/h3&gt;
+                                &lt;p&gt;A step-by-step guide to DIY projects that are perfect for beginners.&lt;/p&gt;
+                                &lt;a href=&quot;#&quot; class=&quot;read-more&quot;&gt;Read More&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/section&gt;
+                
+                    &lt;!-- Footer --&gt;
+                    &lt;footer&gt;
+                        &lt;p&gt;&copy; 2024 Crafted Whimsy. All Rights Reserved.&lt;/p&gt;
+                        &lt;ul class=&quot;social-links&quot;&gt;
+                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Instagram&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
                         &lt;/ul&gt;
-                    &lt;/nav&gt;
-                &lt;/header&gt;
-            
-                &lt;!-- Hero Section --&gt;
-                &lt;section class="hero"&gt;
-                    &lt;div class="hero-content"&gt;
-                        &lt;h2&gt;Welcome to Crafted Whimsy&lt;/h2&gt;
-                        &lt;p&gt;Discover the best handmade crafts and ideas to inspire your creativity.&lt;/p&gt;
-                        &lt;a href="#" class="hero-btn"&gt;Explore More&lt;/a&gt;
-                    &lt;/div&gt;
-                &lt;/section&gt;
-            
-                &lt;!-- Blog Section --&gt;
-                &lt;section class="blogs"&gt;
-                    &lt;h2&gt;Latest Blogs&lt;/h2&gt;
-                    &lt;div class="blog-container"&gt;
-                        &lt;div class="blog-card"&gt;
-                            &lt;img src="https://via.placeholder.com/300x200" alt="Blog Image"&gt;
-                            &lt;h3&gt;Login And Registration&lt;/h3&gt;
-                            &lt;p&gt;Make backend login and registration using phpMyAdmin and XAMPP.&lt;/p&gt;
-                            &lt;a href="#" class="read-more"&gt;Read More&lt;/a&gt;
-                        &lt;/div&gt;
-            
-                        &lt;div class="blog-card"&gt;
-                            &lt;img src="https://via.placeholder.com/300x200" alt="Blog Image"&gt;
-                            &lt;h3&gt;Machine Crafting 101&lt;/h3&gt;
-                            &lt;p&gt;Learn the basics of machine crafting and how to get started with simple projects.&lt;/p&gt;
-                            &lt;a href="#" class="read-more"&gt;Read More&lt;/a&gt;
-                        &lt;/div&gt;
-            
-                        &lt;div class="blog-card"&gt;
-                            &lt;img src="https://via.placeholder.com/300x200" alt="Blog Image"&gt;
-                            &lt;h3&gt;DIY Projects for Beginners&lt;/h3&gt;
-                            &lt;p&gt;A step-by-step guide to DIY projects that are perfect for beginners.&lt;/p&gt;
-                            &lt;a href="#" class="read-more"&gt;Read More&lt;/a&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/section&gt;
-            
-                &lt;!-- Footer --&gt;
-                &lt;footer&gt;
-                    &lt;p&gt;&copy; 2024 Crafted Whimsy. All Rights Reserved.&lt;/p&gt;
-                    &lt;ul class="social-links"&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;Facebook&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;Instagram&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;Twitter&lt;/a&gt;&lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/footer&gt;
-            
-            &lt;/body&gt;
-            &lt;/html&gt;</code></pre>
-            </div>
+                    &lt;/footer&gt;
+                
+                &lt;/body&gt;
+                &lt;/html&gt;
+                </pre>
+                
+        <button onclick="copyCode('main-html-code')">Copy main.html Code</button>
+        <p>Copied: <span id="main-html-code-counter">0</span> times</p>
+    </div>
+   
 <br><br><br>
     <!-- signup.php (for Registration) -->
     <div class="code-block">
