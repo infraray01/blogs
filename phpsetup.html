@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Files and MySQL in AwardSpace</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #292c35;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+        }
+        h3{
+            color: white;
+        }
+        p{
+            color: white;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        /* Back Button Style */
+        button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #ffc107;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #292c35;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #ff9800;
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        h2 {
+            color: #ffc107;
+            text-align: center;
+        }
+
+        ol {
+            color: white;
+            line-height: 1.8;
+        }
+
+        pre {
+            background-color: #292c35;
+            color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .step {
+            background-color: #292c35;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffc107;
+            color: #1f1f2e;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Awardspot Setup - Code Blog</h1>
+        <p>How to Upload Files and MySQL in AwardSpace!</p>
+        <button onclick="location.href='index.html'">BACK</button>
+    </header>
+
+
+
+
+<div class="container">
+    
+    <h2>Follow these steps:</h2>
+
+    <div class="step">
+        <h3>Step 1: Upload Files via File Manager</h3>
+        <ol>
+            <li>Log in to your AwardSpace account and go to the <strong>Control Panel</strong>.</li>
+            <li>Navigate to <strong>File Manager</strong>.</li>
+            <li>In the File Manager, open the <strong>htdocs</strong> folder. This is the root folder for your website.</li>
+            <li>Click on the <strong>Upload</strong> button and upload all your website files (HTML, CSS, JS, PHP, etc.).</li>
+            <li>Once uploaded, ensure your main file (e.g., <code>index.html</code> or <code>index.php</code>) is in the root directory.</li>
+        </ol>
+    </div>
+
+    <div class="step">
+        <h3>Step 2: Import Your MySQL Database</h3>
+        <ol>
+            <li>In the Control Panel, go to <strong>MySQL Databases</strong>.</li>
+            <li>Click on <strong>phpMyAdmin</strong> to open the database management tool.</li>
+            <li>Select your database from the left sidebar (e.g., <strong>4531440_login</strong>).</li>
+            <li>Click on the <strong>Import</strong> tab at the top.</li>
+            <li>Click the <strong>Choose File</strong> button and select your SQL file (e.g., <code>database.sql</code>).</li>
+            <li>After selecting the file, click <strong>Go</strong> to import the database.</li>
+            <li>Once the import is complete, verify that the tables have been created successfully.</li>
+        </ol>
+    </div>
+
+    <div class="step">
+        <h3>Step 3: Update Database Connection Details</h3>
+        <p>In your PHP files (like <code>db.php</code>), update your database connection details:</p>
+        <pre>
+$servername = "fdb1029.awardspace.net";
+$username = "4531440_login";
+$password = "your_actual_password";
+$dbname = "4531440_login";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+        </pre>
+        <p>Ensure these values match your AwardSpace database credentials.</p>
+    </div>
+
+    <div class="step">
+        <h3>Step 4: Test Your Website</h3>
+        <ol>
+            <li>After uploading your files and importing your database, visit your domain or subdomain (e.g., <strong>yourdomain.atwebpages.com</strong>).</li>
+            <li>Verify that your website is working as expected.</li>
+            <li>If there are any issues, check your PHP code for errors or misconfigurations.</li>
+        </ol>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<footer>
+    &copy; 2024 Your Website | All Rights Reserved
+</footer>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</body>
+</html>
