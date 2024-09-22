@@ -92,9 +92,10 @@
 <div class="container">
 
 
-    <div class="code-block">
-        <h1>SQL Code Display</h1>
-        <pre><code>CREATE DATABASE login;
+  <div class="code-block">
+    <h2>Sql Table</h2>
+    <pre id="sql-table-code">
+            CREATE DATABASE login;
     
     USE login;
     
@@ -104,7 +105,7 @@
         email VARCHAR(100) NOT NULL UNIQUE,
         password VARCHAR(255) NOT NULL
     );</code></pre>
-        <button onclick="copyCode('sqly-table-code')">Copy Directory Structure</button>
+        <button onclick="copyCode('sql-table-code')">Copy Directory Structure</button>
         <p>Copied: <span id="directory-structure-code-counter">0</span> times</p>
     </div>
     
