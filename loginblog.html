@@ -503,7 +503,7 @@ input {
     background: #1c1e29;
 }
     </pre>
-    <button onclick="copyCode('index-css-code')">Copy index.css Code</button>
+    <button onclick="copyCode('index-css-code')">Copy style.css Code</button>
     <p>Copied: <span id="index-css-code-counter">0</span> times</p>
 </div>
 
@@ -513,86 +513,271 @@ input {
     <div class="code-block">
         <h2>main.html</h2>
         <pre id="main-html-code">
-            
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang=&quot;en&quot;&gt;
-                &lt;head&gt;
-                    &lt;meta charset=&quot;UTF-8&quot;&gt;
-                    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-                    &lt;title&gt;Main Page&lt;/title&gt;
-                    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
-                    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                
-                    &lt;!-- Navbar --&gt;
-                    &lt;header&gt;
-                        &lt;nav&gt;
-                            &lt;div class=&quot;logo&quot;&gt;
-                                &lt;h1&gt;Crafted Whimsy&lt;/h1&gt;
-                            &lt;/div&gt;
-                            &lt;ul class=&quot;nav-links&quot;&gt;
-                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
-                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Blogs&lt;/a&gt;&lt;/li&gt;
-                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
-                                &lt;li&gt;&lt;a href=&quot;index.html&quot; class=&quot;logout-btn&quot;&gt;Logout&lt;/a&gt;&lt;/li&gt; 
-                            &lt;/ul&gt;
-                        &lt;/nav&gt;
-                    &lt;/header&gt;
-                
-                    &lt;!-- Hero Section --&gt;
-                    &lt;section class=&quot;hero&quot;&gt;
-                        &lt;div class=&quot;hero-content&quot;&gt;
-                            &lt;h2&gt;Welcome to Crafted Whimsy&lt;/h2&gt;
-                            &lt;p&gt;Discover the best handmade crafts and ideas to inspire your creativity.&lt;/p&gt;
-                            &lt;a href=&quot;#&quot; class=&quot;hero-btn&quot;&gt;Explore More&lt;/a&gt;
-                        &lt;/div&gt;
-                    &lt;/section&gt;
-                
-                    &lt;!-- Blog Section --&gt;
-                    &lt;section class=&quot;blogs&quot;&gt;
-                        &lt;h2&gt;Latest Blogs&lt;/h2&gt;
-                        &lt;div class=&quot;blog-container&quot;&gt;
-                            &lt;div class=&quot;blog-card&quot;&gt;
-                                &lt;img src=&quot;https://via.placeholder.com/300x200&quot; alt=&quot;Blog Image&quot;&gt;
-                                &lt;h3&gt;Login And Registration&lt;/h3&gt;
-                                &lt;p&gt;Make backend login and registration using phpmyadmion xampp&lt;/p&gt;
-                                &lt;a href=&quot;#&quot; class=&quot;read-more&quot;&gt;Read More&lt;/a&gt;
-                            &lt;/div&gt;
-                
-                            &lt;div class=&quot;blog-card&quot;&gt;
-                                &lt;img src=&quot;https://via.placeholder.com/300x200&quot; alt=&quot;Blog Image&quot;&gt;
-                                &lt;h3&gt;Machine Crafting 101&lt;/h3&gt;
-                                &lt;p&gt;Learn the basics of machine crafting and how to get started with simple projects.&lt;/p&gt;
-                                &lt;a href=&quot;#&quot; class=&quot;read-more&quot;&gt;Read More&lt;/a&gt;
-                            &lt;/div&gt;
-                
-                            &lt;div class=&quot;blog-card&quot;&gt;
-                                &lt;img src=&quot;https://via.placeholder.com/300x200&quot; alt=&quot;Blog Image&quot;&gt;
-                                &lt;h3&gt;DIY Projects for Beginners&lt;/h3&gt;
-                                &lt;p&gt;A step-by-step guide to DIY projects that are perfect for beginners.&lt;/p&gt;
-                                &lt;a href=&quot;#&quot; class=&quot;read-more&quot;&gt;Read More&lt;/a&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/section&gt;
-                
-                    &lt;!-- Footer --&gt;
-                    &lt;footer&gt;
-                        &lt;p&gt;&copy; 2024 Crafted Whimsy. All Rights Reserved.&lt;/p&gt;
-                        &lt;ul class=&quot;social-links&quot;&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Instagram&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
-                        &lt;/ul&gt;
-                    &lt;/footer&gt;
-                
-                &lt;/body&gt;
-                &lt;/html&gt;
-                </pre>
-                
-        <button onclick="copyCode('main-html-code')">Copy main.html Code</button>
-        <p>Copied: <span id="main-html-code-counter">0</span> times</p>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Main Page&lt;/title&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: &#039;Roboto&#039;, sans-serif;
+            background-color: #292c35;
+            color: white;
+            scroll-behavior: smooth;
+        }
+        
+        header {
+            background-color: #ffc107;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-links li {
+            margin: 0 15px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #292c35;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #fff;
+        }
+        
+        .logout-btn {
+            background-color: #ffffff;
+            color: #ffc107;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            color: white;
+        }
+        
+        .logout-btn:hover {
+            background-color: #ff9800;
+            color: white;
+        }
+        
+        .hero {
+            background: url(&#039;https://via.placeholder.com/1200x500&#039;) no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero-content {
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h2 {
+            font-size: 40px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin: 10px 0;
+            animation: fadeIn 3s ease-in-out;
+        }
+        
+        .hero-btn {
+            background-color: #ffc107;
+            color: #292c35;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            animation: fadeIn 4s ease-in-out;
+        }
+        
+        .hero-btn:hover {
+            background-color: #ff9800;
+            transition: background-color 0.3s;
+        }
+        
+        .blogs {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #1f1f2e;
+        }
+        
+        .blogs h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #ffc107;
+        }
+        
+        .blog-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .blog-card {
+            background-color: #292c35;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        
+        .blog-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .blog-card h3 {
+            margin: 15px 0;
+            font-size: 24px;
+        }
+        
+        .blog-card p {
+            font-size: 16px;
+        }
+        
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #ffc107;
+            color: #292c35;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .read-more:hover {
+            background-color: #ff9800;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        footer {
+            background-color: #ffc107;
+            padding: 20px;
+            text-align: center;
+            color: #292c35;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+        }
+        
+        footer .social-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        footer .social-links a {
+            text-decoration: none;
+            color: #292c35;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        
+        footer .social-links a:hover {
+            color: white;
+        }
+        
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Navbar --&gt;
+    &lt;header&gt;
+        &lt;nav&gt;
+            &lt;div class=&quot;logo&quot;&gt;
+                &lt;h1&gt;Crafted Whimsy&lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;ul class=&quot;nav-links&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Blogs&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;index.html&quot; class=&quot;logout-btn&quot;&gt;Logout&lt;/a&gt;&lt;/li&gt; 
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;!-- Hero Section --&gt;
+    &lt;section class=&quot;hero&quot;&gt;
+        &lt;div class=&quot;hero-content&quot;&gt;
+            &lt;h2&gt;Welcome to Crafted Whimsy&lt;/h2&gt;
+            &lt;p&gt;Unleash your creativity, one blog at a time.&lt;/p&gt;
+            &lt;a href=&quot;#blogs&quot; class=&quot;hero-btn&quot;&gt;Explore Blogs&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Blogs Section --&gt;
+    &lt;section class=&quot;blogs&quot; id=&quot;blogs&quot;&gt;
+        &lt;h2&gt;Latest Blogs&lt;/h2&gt;
+        &lt;div class=&quot;blog-container&quot;&gt;
+            &lt;div class=&quot;blog-card&quot;&gt;
+                &lt;img src=&quot;https://via.placeholder.com/300&quot; alt=&quot;Blog Image&quot;&gt;
+                &lt;h3&gt;How to Improve Your Photography Skills&lt;/h3&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...&lt;/p&gt;
+                &lt;a href=&quot;#&quot; class=&quot;read-more&quot;&gt;Read More&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;blog-card&quot;&gt;
+                &lt;img src=&quot;https://via.placeholder.com/300&quot; alt=&quot;Blog Image&quot;&gt;
+                &lt;h3&gt;Top 10 DIY Craft Ideas&lt;/h3&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...&lt;/p&gt;
+                &lt;a href=&quot;#&quot; class=&quot;read-more&quot;&gt;Read More&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;blog-card&quot;&gt;
+                &lt;img src=&quot;https://via.placeholder.com/300&quot; alt=&quot;Blog Image&quot;&gt;
+                &lt;h3&gt;Creative Writing Tips for Beginners&lt;/h3&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...&lt;/p&gt;
+                &lt;a href=&quot;#&quot; class=&quot;read-more&quot;&gt;Read More&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Footer --&gt;
+    &lt;footer&gt;
+        &lt;p&gt;© 2024 Crafted Whimsy. All Rights Reserved.&lt;/p&gt;
+        &lt;ul class=&quot;social-links&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Instagram&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+        <button onclick="copyCode('main-html-code')">Copy Code</button>
+        <p>Times copied: <span id="main-html-code-counter">0</span></p>
     </div>
    
 <br><br><br>
