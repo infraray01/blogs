@@ -852,20 +852,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="code-block">
         <h2>db.php (Database Connection)</h2>
         <pre id="db-php-code">
-&lt;?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "mydatabase";
+&lt;?<?php
+// Database connection details
+$servername = "localhost"; // Database Host
+$username = "root";             // Database User
+$password = "";      // Database Password (replace with your actual password)
+$dbname = "login";               // Database Name
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
-if ($conn-&gt;connect_error) {
-    die("Connection failed: " . $conn-&gt;connect_error);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 ?>
+
         </pre>
         <button onclick="copyCode('db-php-code')">Copy db.php Code</button>
         <p>Copied: <span id="db-php-code-counter">0</span> times</p>
